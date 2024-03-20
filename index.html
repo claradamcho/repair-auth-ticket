@@ -278,7 +278,7 @@
         <!-- Text Input -->
         <div class="chi-grid">
           <div class="chi-col -w--12 -w-lg--6">
-            <div class="chi-form__item -mt--3">
+            <div class="chi-form__item">
               <label class="chi-label" for="technician">Technician
                 <abbr class="chi-label__required" aria-label="Required field">*</abbr>
               </label>
@@ -296,8 +296,8 @@
           </div>
           <div class="chi-col -w--6 -w-lg--6">
             <!-- Number Input -->
-            <div class="chi-form__item -mt--3">
-              <label class="chi-label" for="input-example-base">Label</label>
+            <div class="chi-form__item">
+              <label class="chi-label" for="input-example-base">Number of Service IDs</label>
               <div class="chi-number-input">
                 <input id="input-example-base" type="number" class="chi-input" value="0" aria-label="Input Label">
                 <button aria-label="Decrease"></button>
@@ -312,20 +312,16 @@
         <chi-phone-input id="phone-input-base"></chi-phone-input><!-- EO Phone Input -->
 
         <!-- Date Picker -->
-        <label class="chi-label -mt--3" for="problem-start">
-          When did the problem start?
-          <abbr class="chi-label__required" aria-label="Required field">*</abbr>
-        </label>
         <div class="chi-grid">
-          <div class="chi-col -w--12 -w-lg--6">
-            <chi-label for="example__base">Label</chi-label>
+          <div class="chi-col -w--12 -w-lg--6 -mt--3">
+            <chi-label required for="example__base">Best Time to Call Technician</chi-label>
             <chi-time-picker id="example__base"></chi-time-picker>
           </div> <!-- EO Date Picker -->
 
           <!-- Search Dropdown -->
-          <div class="chi-col -w--12 -w-lg--6">
+          <div class="chi-col -w--12 -w-lg--6 -mt--3">
             <label class="chi-label" for="time-zone">
-              Time Zone
+              Weekday Only Availability
               <abbr class="chi-label__required" aria-label="Required field">*</abbr>
             </label>
             <div class="chi-form__item">
@@ -334,55 +330,55 @@
                 <span class="chi-switch__content">
                   <span class="chi-switch__thumb"></span>
                 </span>
-                <span class="chi-switch__label">Label</span>
+                <span class="chi-switch__label">On</span>
               </label>
             </div>
           </div> <!-- EO Search Dropdown -->
         </div><!-- EO of grid -->
 
-                </div>
-                <div class="chi-epanel__footer -justify-content--end">
-                  <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
-                  <button class="chi-button -primary" data-chi-epanel-action="next">Continue</button>
-                </div>
-              </div>
+          </div>
+          <div class="chi-epanel__footer -justify-content--end">
+            <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
+            <button class="chi-button -primary" data-chi-epanel-action="next">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="chi-epanel" data-chi-epanel-group="example__base">
+      <div class="chi-epanel__header">
+        <div class="chi-epanel__number">4.</div>
+        <div class="chi-epanel__title">Panel title</div>
+        <div class="chi-epanel__content">
+          <div class="chi-epanel__collapse">
+            <div class="-done--only">
+              Use this area to present
+              a read-only summary of what the user
+              entered or selected in step 4.
+              (e.g.) payment method
             </div>
           </div>
         </div>
-        <div class="chi-epanel" data-chi-epanel-group="example__base">
-          <div class="chi-epanel__header">
-            <div class="chi-epanel__number">4.</div>
-            <div class="chi-epanel__title">Panel title</div>
+        <div class="chi-epanel__action -done--only">
+          <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+        </div>
+      </div>
+      <div class="chi-epanel__collapse">
+        <div class="-active--only">
+          <div class="chi-epanel__body">
             <div class="chi-epanel__content">
-              <div class="chi-epanel__collapse">
-                <div class="-done--only">
-                  Use this area to present
-                  a read-only summary of what the user
-                  entered or selected in step 4.
-                  (e.g.) payment method
-                </div>
-              </div>
+              <div class="chi-epanel__subtitle">Optional subtitle</div>
+              <p class="chi-epanel__text">Content in expansion panel (e.g. a form to enter payment method)</p>
             </div>
-            <div class="chi-epanel__action -done--only">
-              <button class="chi-button -primary -flat" data-chi-epanel-action="active">Change</button>
+            <div class="chi-epanel__footer -justify-content--end">
+              <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
+              <button class="chi-button -primary" data-chi-epanel-action="done">Finish</button>
             </div>
           </div>
-          <div class="chi-epanel__collapse">
-            <div class="-active--only">
-              <div class="chi-epanel__body">
-                <div class="chi-epanel__content">
-                  <div class="chi-epanel__subtitle">Optional subtitle</div>
-                  <p class="chi-epanel__text">Content in expansion panel (e.g. a form to enter payment method)</p>
-                </div>
-                <div class="chi-epanel__footer -justify-content--end">
-                  <button class="chi-button" data-chi-epanel-action="previous">Previous</button>
-                  <button class="chi-button -primary" data-chi-epanel-action="done">Finish</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End of E-Panel -->
- 
+        </div>
+      </div>
+    </div><!-- End of E-Panel -->
+
       <div class="chi-col -w--2"></div>
     </div><!-- End of grid -->
   </section><!-- End of Section -->
@@ -396,7 +392,5 @@
   <script>chi.dropdown(document.getElementById('time-zone'));</script>
   <script>chi.dropdown(document.getElementById('time-zone'));</script>
   
-
 </body>
-
 </html>
